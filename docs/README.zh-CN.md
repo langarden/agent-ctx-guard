@@ -3,6 +3,13 @@
 > **压缩是过程，可验证才是结果。**  
 > 面向 Agent 会话的可验证上下文压缩——折叠、可逆解压、防篡改账本。
 
+```bash
+pip install agent-ctx-guard          # 零依赖，Python 3.9+
+```
+
+<a href="https://gitcode.com/gcw_MKhSyoGN/agent-ctx-guard"><img src="https://img.shields.io/badge/GitCode-gcw_MKhSyoGN%2Fagent-ctx-guard-blue" alt="GitCode"></a>
+<a href="https://github.com/langarden/agent-ctx-guard"><img src="https://img.shields.io/badge/GitHub-langarden%2Fagent-ctx-guard-black" alt="GitHub"></a>
+
 `agent-ctx-guard` 把长会话转录压成小体积的元数据摘要，同时把**每条原始消息**保留在哈希校验的存档中。账本是防篡改的 JSONL 哈希链；存档可逐字节校验；摘要只含元数据——所以你可以发布"压掉了什么"的证明，**而不泄漏原文**。它是 **Verifiable-agent 家族**成员。
 
 > ⚠️ **研究原型 — AI 辅助开发。** 这是一个开源研究/实验原型，由 AI 辅助产出。
@@ -31,10 +38,6 @@
 - 零依赖，纯 Python 3.9+ 标准库
 
 ## 安装
-
-```bash
-pip install agent-ctx-guard
-```
 
 ## 快速开始
 

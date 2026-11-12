@@ -3,6 +3,16 @@
 > **压缩是过程，可验证才是结果。**  
 > Verifiable context compression for agent sessions — fold, reversible unfold, tamper-evident ledger.
 
+```bash
+pip install agent-ctx-guard            # zero deps, Python 3.9+
+```
+
+<a href="https://gitcode.com/gcw_MKhSyoGN/agent-ctx-guard"><img src="https://img.shields.io/badge/GitCode-gcw_MKhSyoGN%2Fagent-ctx-guard-blue" alt="GitCode"></a>
+<a href="https://github.com/langarden/agent-ctx-guard"><img src="https://img.shields.io/badge/GitHub-langarden%2Fagent-ctx-guard-black" alt="GitHub"></a>
+<img src="https://img.shields.io/badge/tests-14%20passed-green" alt="tests">
+<img src="https://img.shields.io/badge/license-MIT-yellow" alt="license">
+<img src="https://img.shields.io/badge/python-3.9%2B-blue" alt="python">
+
 `agent-ctx-guard` folds a long session transcript into small metadata summaries while preserving **every original message** in a hash-checked archive. The ledger is a tamper-evident JSONL hash chain; the archive is byte-verifiable; summaries are metadata-only, so you can publish what was compressed **without leaking raw content**. Part of the **Verifiable-agent family**.
 
 > ⚠️ **Research prototype — AI-assisted development.** This is an open-source
