@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Demo entry: python -m agent_ctx_guard"""
+"""Demo/CLI entry: python -m agent_ctx_guard  |  agent-ctx-guard"""
 
 import json
 import sys
@@ -32,6 +32,11 @@ def demo() -> None:
     print(restored["content"][:80])
 
 
-if __name__ == "__main__":
+def main() -> int:
+    """Console entry point for the `agent-ctx-guard` script (demo mode)."""
     demo()
-    sys.exit(0)
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

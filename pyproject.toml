@@ -20,5 +20,8 @@ classifiers = [
 ]
 dependencies = []
 
+[project.scripts]
+agent-ctx-guard = "agent_ctx_guard.__main__:main"
+
 [tool.setuptools]
 packages = ["agent_ctx_guard"]

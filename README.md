@@ -5,6 +5,21 @@
 
 `agent-ctx-guard` folds a long session transcript into small metadata summaries while preserving **every original message** in a hash-checked archive. The ledger is a tamper-evident JSONL hash chain; the archive is byte-verifiable; summaries are metadata-only, so you can publish what was compressed **without leaking raw content**. Part of the **Verifiable-agent family**.
 
+> ⚠️ **Research prototype — AI-assisted development.** This is an open-source
+> research/experimental prototype produced with AI assistance. It is provided
+> **AS IS**, without warranty of any kind, and is not a commercial or
+> production-grade product. Use at your own risk.
+
+## Verifiable-agent family
+
+| Repo | Role |
+|:--|:--|
+| **agent-ctx-guard** | verifiable context **compression** (this repo) |
+| [agent-call-audit](https://gitcode.com/gcw_MKhSyoGN/agent-call-audit) | audit **engine** |
+| [agent-memory-ledger](https://gitcode.com/gcw_MKhSyoGN/agent-memory-ledger) | verifiable **memory** layer |
+| [agent-audit-gateway](https://gitcode.com/gcw_MKhSyoGN/agent-audit-gateway) | HTTP **gateway** |
+| [agent-route-grid](https://gitcode.com/gcw_MKhSyoGN/agent-route-grid) | audited multi-agent **routing** |
+
 ## Why
 
 Context compression is the hot topic in the agent world. But most compressors are black boxes — you never know **what** was dropped. This library answers that: compression is a *process*, and `agent-ctx-guard` makes it a *verifiable result*. It is the memory-ledger approach applied to session compression: **fold → reversible unfold → prove nothing was lost**.

@@ -5,6 +5,19 @@
 
 `agent-ctx-guard` 把长会话转录压成小体积的元数据摘要，同时把**每条原始消息**保留在哈希校验的存档中。账本是防篡改的 JSONL 哈希链；存档可逐字节校验；摘要只含元数据——所以你可以发布"压掉了什么"的证明，**而不泄漏原文**。它是 **Verifiable-agent 家族**成员。
 
+> ⚠️ **研究原型 — AI 辅助开发。** 这是一个开源研究/实验原型，由 AI 辅助产出。
+> 按 **AS IS** 提供，不含任何形式的担保，非商业或生产级产品。使用者自担风险。
+
+## 产品家族（Verifiable-agent 家族）
+
+| 仓库 | 角色 |
+|:--|:--|
+| **agent-ctx-guard** | 可验证上下文**压缩**（本仓库） |
+| [agent-call-audit](https://gitcode.com/gcw_MKhSyoGN/agent-call-audit) | 审计**引擎** |
+| [agent-memory-ledger](https://gitcode.com/gcw_MKhSyoGN/agent-memory-ledger) | 可验证**记忆层** |
+| [agent-audit-gateway](https://gitcode.com/gcw_MKhSyoGN/agent-audit-gateway) | HTTP **网关** |
+| [agent-route-grid](https://gitcode.com/gcw_MKhSyoGN/agent-route-grid) | 可审计多 Agent **路由** |
+
 ## 为什么需要它
 
 上下文压缩是 Agent 圈当前最热的话题。但大多数压缩器是黑盒——你永远不知道**丢掉了什么**。这个库回答了这个问题：压缩是一个*过程*，`agent-ctx-guard` 让它变成*可验证的结果*。这是把 memory-ledger 的方法论用到会话压缩上：**折叠 → 可逆还原 → 证明什么都没丢**。
